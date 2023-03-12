@@ -9,6 +9,9 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    flex: {
+      0: '0 0 auto',
+    },
     extend: {},
     colors: {
       'pure-white': 'hsl(0, 0%, 100%)',
@@ -17,6 +20,9 @@ module.exports = {
       'dark-blue': 'hsl(223, 30%, 9%)',
       'primary-red': 'hsl(0, 97%, 63%)',
     },
+    fontFamily: {
+      sans: ['var(--font-outfit)'],
+    },
     fontSize: {
       'heading-l': '2rem',
       'heading-m': '1.5rem',
@@ -24,6 +30,7 @@ module.exports = {
       'heading-xs': '1.125rem',
       'body-md': '0.9375rem',
       'body-s': '0.8125rem',
+      'body-xs': '0.75rem',
     },
   },
   plugins: [],

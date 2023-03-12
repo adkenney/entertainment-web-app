@@ -11,6 +11,16 @@
   svg:hover {
     cursor: pointer;
   }
+
+  p {
+    @apply text-body-xs;
+    @apply font-light;
+  }
+
+  h3 {
+    @apply text-body-md;
+    @apply font-medium;
+  }
 }
 
 @layer components {
