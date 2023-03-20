@@ -26,7 +26,7 @@ module.exports = {
     fontSize: {
       'heading-l': '2rem',
       'heading-m': '1.5rem',
-      'heading-s': '1.5rem',
+      'heading-s': '1.25rem',
       'heading-xs': '1.125rem',
       'body-md': '0.9375rem',
       'body-s': '0.8125rem',
