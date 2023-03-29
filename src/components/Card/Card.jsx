@@ -1,9 +1,22 @@
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
-function Card({ releaseDate, mediaType, title, imgSrc, iconSrc }) {
+function Card({ id, releaseDate, mediaType, title, imgSrc, iconSrc }) {
+  const router = useRouter();
+  function handleClick(e) {
+    e.preventDefault();
+    if (mediaType === 'Movie') {
+      router.push(`/movie/${id}`);
+    } else {
+      router.push(`/tv/${id}`);
+    }
+  }
   return (
-    <div className="h-[9.625em] w-[10.25em] rounded-t-lg overflow-hidden">
-      <div className="h-[6.785em] relative rounded-lg overflow-hidden">
+    <div
+      className="h-[9.625em] w-[10.25em] rounded-t-lg overflow-hidden"
+      onClick={handleClick}
+    >
+      <div className="h-[6.785em] relative rounded-lg overflow-hidden" id={id}>
         <Image
           className="brightness-75"
           src={imgSrc}

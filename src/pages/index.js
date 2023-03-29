@@ -17,7 +17,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <>
-        {/* TODO: fix how non trending entertainment is displayed */}
         <SearchBar placeholder="Search for movies or TV series" />
         <EntertainmentView
           isTrendingView

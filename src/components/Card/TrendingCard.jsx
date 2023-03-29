@@ -1,8 +1,22 @@
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
-function TrendingCard({ releaseDate, mediaType, title, imgSrc, iconSrc }) {
+function TrendingCard({ id, releaseDate, mediaType, title, imgSrc, iconSrc }) {
+  const router = useRouter();
+
+  function handleClick(e) {
+    e.preventDefault();
+    if (mediaType === 'Movie') {
+      router.push(`/movie/${id}`);
+    } else {
+      router.push(`/tv/${id}`);
+    }
+  }
   return (
-    <div className="h-[8.74em] w-[15em] relative rounded-lg overflow-hidden mx-3 my-3 flex-0 cursor-pointer">
+    <div
+      className="h-[8.74em] w-[15em] relative rounded-lg overflow-hidden mx-3 my-3 flex-0 cursor-pointer"
+      onClick={handleClick}
+    >
       <Image
         className="brightness-75"
         src={imgSrc}

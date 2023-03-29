@@ -13,7 +13,6 @@ function EntertainmentView({
 }) {
   const { data, error } = useSWR(endpoint, fetcher);
   if (error) return <p>Error</p>;
-  console.log(data);
   return (
     <section>
       <h2 className="p-4">{title}</h2>
@@ -29,11 +28,14 @@ function EntertainmentView({
             const movieReleaseDate = item.release_date;
             const tvReleaseDate = item.first_air_date;
             const mediaType = item.media_type === 'movie' ? 'Movie' : 'TV';
-            const image = `${API_IMAGE_PATH}${item.backdrop_path}`;
+            const image = `${API_IMAGE_PATH}${
+              item.backdrop_path || item.poster_path
+            }`;
             const icon = item.media_type === 'movie' ? MovieIcon : TvIcon;
             return (
               <Component
                 key={item.id}
+                id={item.id}
                 releaseDate={movieReleaseDate || tvReleaseDate}
                 mediaType={defaultMediaType || mediaType}
                 title={item.title || item.name}
