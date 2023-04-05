@@ -2,13 +2,13 @@ import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import { fetcher } from '@/utils';
 import Head from 'next/head';
-export default function Movie() {
+export default function TV() {
   const router = useRouter();
   const { tvId } = router.query;
   const { data: tv, error: tvError } = useSWR(`/api/tv/${tvId}`, fetcher);
   if (tvError) return <p>{tvError}</p>;
   if (!tv) return <p>{tvError}</p>;
-  console.log(tv);
+  console.log(tvId);
   return (
     <>
       <Head>
