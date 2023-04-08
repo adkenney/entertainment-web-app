@@ -7,7 +7,7 @@ function TrendingCard({ id, releaseDate, mediaType, title, imgSrc, iconSrc }) {
   function handleClick(e) {
     e.preventDefault();
     if (mediaType === 'Movie') {
-      router.push(`/movie/${id}`);
+      router.push(`/movies/${id}`);
     } else {
       router.push(`/tv/${id}`);
     }

@@ -6,14 +6,14 @@ function Card({ id, releaseDate, mediaType, title, imgSrc, iconSrc }) {
   function handleClick(e) {
     e.preventDefault();
     if (mediaType === 'Movie') {
-      router.push(`/movie/${id}`);
+      router.push(`/movies/${id}`);
     } else {
       router.push(`/tv/${id}`);
     }
   }
   return (
     <div
-      className="h-[9.625em] w-[10.25em] rounded-t-lg overflow-hidden"
+      className="h-[9.625em] w-[10.25em] rounded-t-lg overflow-hidden cursor-pointer"
       onClick={handleClick}
     >
       <div className="h-[6.785em] relative rounded-lg overflow-hidden" id={id}>

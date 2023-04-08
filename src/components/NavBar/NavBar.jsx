@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Image from 'next/image';
 import LogoIcon from '@/components/icons/LogoIcon';
 import HomeIcon from '../icons/HomeIcon';
@@ -9,11 +10,19 @@ import ProfileImg from '@/assets/image-avatar.png';
 function NavBar() {
   return (
     <nav className="flex items-center px-4 py-5 bg-semi-dark-blue">
-      <LogoIcon />
+      <Link href="/">
+        <LogoIcon />
+      </Link>
       <div className="flex gap-6 mx-auto">
-        <HomeIcon />
-        <MovieIcon />
-        <TvIcon />
+        <Link href="/">
+          <HomeIcon />
+        </Link>
+        <Link href="/movies/popular">
+          <MovieIcon />
+        </Link>
+        <Link href="/tv/popular">
+          <TvIcon />
+        </Link>
         <BookmarkIcon />
       </div>
       <Image
