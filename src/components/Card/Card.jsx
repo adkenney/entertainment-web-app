@@ -13,16 +13,18 @@ function Card({ id, releaseDate, mediaType, title, imgSrc, iconSrc }) {
   }
   return (
     <div
-      className="h-[9.625em] w-[10.25em] rounded-t-lg overflow-hidden cursor-pointer"
+      className="rounded-t-lg overflow-hidden cursor-pointer hover:scale-105"
       onClick={handleClick}
     >
-      <div className="h-[6.785em] relative rounded-lg overflow-hidden" id={id}>
+      <div
+        className="relative w-full max-w-full h-36 rounded-lg overflow-hidden"
+        id={id}
+      >
         <Image
-          className="brightness-75"
+          className="brightness-75 object-cover"
           src={imgSrc}
           alt={title}
           fill
-          sizes="(max-width: 29.375em) 100vw"
         ></Image>
       </div>
       <div className="mt-2">
@@ -36,7 +38,7 @@ function Card({ id, releaseDate, mediaType, title, imgSrc, iconSrc }) {
           </div>
         </div>
         <div>
-          <h3 className="truncate w-[9em]">{title}</h3>
+          <h3 className="truncate">{title}</h3>
         </div>
       </div>
     </div>

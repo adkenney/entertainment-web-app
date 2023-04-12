@@ -1,6 +1,7 @@
 function TvIcon() {
   return (
     <svg
+      className="nav-icon"
       width="20"
       height="20"
       viewBox="0 0 20 20"

@@ -10,10 +10,6 @@ function SearchBar({ placeholder }) {
       if (e.target.value === '') {
         return;
       } else {
-        {
-          /*TODO: Remove console log*/
-        }
-        console.log(query);
         router.push(`/search/${query.trim()}`);
         setQuery('');
       }

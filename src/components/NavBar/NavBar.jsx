@@ -18,7 +18,7 @@ function NavBar() {
           <HomeIcon />
         </Link>
         <Link href="/movies/popular">
-          <MovieIcon />
+          <MovieIcon classname={'nav-icon'} />
         </Link>
         <Link href="/tv/popular">
           <TvIcon />

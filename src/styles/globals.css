@@ -13,16 +13,16 @@
   }
 
   p {
-    @apply text-body-xs;
+    @apply text-body-s;
     @apply font-light;
   }
 
   h2 {
-    @apply text-heading-s;
+    @apply text-heading-l;
   }
 
   h3 {
-    @apply text-body-md;
+    @apply text-heading-m;
     @apply font-medium;
   }
 }
@@ -30,5 +30,9 @@
 @layer components {
   .nav-icon path {
     @apply hover:fill-pure-white;
+  }
+
+  .genre-items {
+    @apply text-body-xs rounded-md bg-primary-red p-1;
   }
 }

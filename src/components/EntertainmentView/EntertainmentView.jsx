@@ -20,7 +20,7 @@ function EntertainmentView({
         className={
           isTrendingView
             ? 'relative flex overflow-x-auto'
-            : 'flex flex-wrap justify-center gap-4'
+            : 'grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-4 p-3'
         }
       >
         {data &&

@@ -1,14 +1,16 @@
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
-import { fetcher } from '@/utils';
+import { API_IMAGE_PATH, fetcher } from '@/utils';
 import Head from 'next/head';
+import MediaDetails from '@/components/MediaDetails/MediaDetails';
+
 export default function TV() {
   const router = useRouter();
   const { tvId } = router.query;
   const { data: tv, error: tvError } = useSWR(`/api/tv/${tvId}`, fetcher);
   if (tvError) return <p>{tvError}</p>;
   if (!tv) return <p>{tvError}</p>;
-  console.log(tvId);
+  console.log(tv.details.seasons.length);
   return (
     <>
       <Head>
@@ -16,9 +18,17 @@ export default function TV() {
         <meta name="description" content={tv.details.overview}></meta>
       </Head>
       {tv && (
-        <div>
-          <h2>{tv.details.name}</h2>
-        </div>
+        <MediaDetails
+          posterImg={`${API_IMAGE_PATH}${tv.details.poster_path}`}
+          title={tv.details.name}
+          releaseDate={tv.details.first_air_date}
+          seasons={tv.details.seasons.length}
+          status={tv.details.status}
+          rating={tv.details.vote_average}
+          genres={tv.details.genres}
+          overview={tv.details.overview}
+          cast={tv.credits.cast}
+        />
       )}
     </>
   );

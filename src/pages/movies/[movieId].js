@@ -1,7 +1,8 @@
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
-import { fetcher } from '@/utils';
+import { API_IMAGE_PATH, fetcher } from '@/utils';
 import Head from 'next/head';
+import MediaDetails from '@/components/MediaDetails/MediaDetails';
 export default function Movie() {
   const router = useRouter();
   const { movieId } = router.query;
@@ -19,9 +20,17 @@ export default function Movie() {
         <meta name="description" content={movie.details.overview}></meta>
       </Head>
       {movie && (
-        <div>
-          <h2>{movie.details.title}</h2>
-        </div>
+        <MediaDetails
+          posterImg={`${API_IMAGE_PATH}${movie.details.poster_path}`}
+          title={movie.details.title}
+          releaseDate={movie.details.release_date}
+          runtime={movie.details.runtime}
+          rating={movie.details.vote_average}
+          genres={movie.details.genres}
+          overview={movie.details.overview}
+          cast={movie.credits.cast}
+          mediaType={'movie'}
+        />
       )}
     </>
   );
