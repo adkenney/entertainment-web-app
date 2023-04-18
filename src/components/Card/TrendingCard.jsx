@@ -14,13 +14,14 @@ function TrendingCard({ id, releaseDate, mediaType, title, imgSrc, iconSrc }) {
   }
   return (
     <div
-      className="relative h-36 w-60 rounded-lg overflow-hidden mx-3 my-3 flex-0 cursor-pointer hover:scale-105"
+      className="relative h-44 w-80 md:h-52 md:w-96 rounded-lg overflow-hidden mx-3 my-3 flex-0 cursor-pointer hover:scale-105"
       onClick={handleClick}
     >
       <Image
         className="brightness-75 object-cover"
         src={imgSrc}
         alt={title}
+        sizes="(min-width: 60em) 25vw, (min-width:28em) 45vw, 100vw"
         fill
       ></Image>
       <div className="absolute bottom-2 left-3">
@@ -34,7 +35,7 @@ function TrendingCard({ id, releaseDate, mediaType, title, imgSrc, iconSrc }) {
           </div>
         </div>
         <div>
-          <h3 className="truncate w-52">{title}</h3>
+          <h3 className="truncate w-72 md:w-[23rem]">{title}</h3>
         </div>
       </div>
     </div>

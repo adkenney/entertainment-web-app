@@ -3,6 +3,8 @@ import Cast from './Cast';
 import DetailsHeading from './DetailsHeading';
 import Overview from './Overview';
 import SearchBar from '../SearchBar/SearchBar';
+import { useState } from 'react';
+import errImg from '../../assets/error-img.png';
 
 export default function MediaDetails({
   posterImg,
@@ -17,14 +19,27 @@ export default function MediaDetails({
   cast,
   mediaType,
 }) {
+  const [imgSource, setImgSource] = useState(posterImg);
   return (
     <>
       <SearchBar />
-      <div className="flex flex-col p-4 gap-4">
-        <div className="self-center">
-          <Image src={posterImg} width={200} height={300} alt={title} />
+      <div className="flex flex-col md:flex-row md:p-6 p-4 gap-6">
+        {/* //TODO: LEFT OFF HERE */}
+        <div className="md:self-start self-center lg:w-2/5">
+          <Image
+            className="object-cover rounded-lg"
+            src={imgSource}
+            alt={title}
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNMqQcAAU0A5aSPMbMAAAAASUVORK5CYII="
+            height={300}
+            width={500}
+            onError={() => {
+              setImgSource(errImg);
+            }}
+          />
         </div>
-        <div>
+        <div className="flex flex-grow flex-col gap-6 md:w-4/5">
           {mediaType === 'movie' ? (
             <DetailsHeading
               title={title}

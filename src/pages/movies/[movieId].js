@@ -12,7 +12,6 @@ export default function Movie() {
   );
   if (movieError) return <p>{movieError}</p>;
   if (!movie) return <p>{movieError}</p>;
-  console.log(movie);
   return (
     <>
       <Head>

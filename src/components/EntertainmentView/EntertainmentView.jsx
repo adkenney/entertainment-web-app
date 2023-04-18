@@ -15,12 +15,12 @@ function EntertainmentView({
   if (error) return <p>Error</p>;
   return (
     <section>
-      <h2 className="p-4">{title}</h2>
+      <h2 className="p-4 md:p-6">{title}</h2>
       <div
         className={
           isTrendingView
-            ? 'relative flex overflow-x-auto'
-            : 'grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-4 p-3'
+            ? 'relative flex overflow-x-auto scrollbar scrollbar-thumb-primary-red scrollbar-thumb-rounded-full scrollbar-h-1'
+            : 'grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 md:p-6 lg:grid-cols-4 gap-4 p-3 lg:gap-8'
         }
       >
         {data &&

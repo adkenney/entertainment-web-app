@@ -28,35 +28,35 @@ export default function Home() {
         <EntertainmentView
           Component={Card}
           endpoint="/api/movies/popular"
-          resultLimit={6}
+          resultLimit={8}
           title="Popular Movies"
           defaultMediaType="Movie"
         />
         <EntertainmentView
           Component={Card}
           endpoint="/api/movies/now-playing"
-          resultLimit={6}
+          resultLimit={8}
           title="In Theatres Now"
           defaultMediaType="Movie"
         />
         <EntertainmentView
           Component={Card}
           endpoint="/api/movies/upcoming"
-          resultLimit={6}
+          resultLimit={8}
           title="Upcoming Movies"
           defaultMediaType="Movie"
         />
         <EntertainmentView
           Component={Card}
           endpoint="/api/tv/popular"
-          resultLimit={6}
+          resultLimit={8}
           title="Popular TV"
           defaultMediaType="TV"
         />
         <EntertainmentView
           Component={Card}
           endpoint="/api/tv/airing"
-          resultLimit={6}
+          resultLimit={8}
           title="Airing Now"
           defaultMediaType="TV"
         />

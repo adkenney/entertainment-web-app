@@ -8,20 +8,22 @@ import SearchBar from '@/components/SearchBar/SearchBar';
 import MovieIcon from '../../assets/icon-category-movie.svg';
 import TvIcon from '../../assets/icon-category-tv.svg';
 
-export default function SearchResults(props) {
+export default function SearchResults() {
   const router = useRouter();
   const { query } = router.query;
   const { data, dataError } = useSWR(`/api/search/${query}`, fetcher);
   if (dataError) return <p>{dataError}</p>;
   if (!data) return <p>{dataError}</p>;
-  console.log(data.media);
   return (
     <div>
       <Head>
         <title>{query} - Search Results</title>
       </Head>
       <SearchBar />
-      <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-3 p-4">
+      <h2 className="text-heading-s md:text-heading-l md:p-6 p-4">
+        Search results for &ldquo;{query}&rdquo;
+      </h2>
+      <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-6 gap-3 md:p-6 p-4">
         {data &&
           data.media.results
             // filter people out of results

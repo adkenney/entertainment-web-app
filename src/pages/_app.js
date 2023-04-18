@@ -1,3 +1,4 @@
+import Attribution from '@/components/Footer/Attribution';
 import Layout from '@/components/Layout/Layout';
 import '@/styles/globals.css';
 import { Outfit } from 'next/font/google';
@@ -9,10 +10,11 @@ const outfit = Outfit({
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={`${outfit.variable} font-sans`}>
+    <div className={`${outfit.variable} font-sans`}>
       <Layout>
         <Component {...pageProps} />
+        <Attribution />
       </Layout>
-    </main>
+    </div>
   );
 }

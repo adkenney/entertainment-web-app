@@ -1,8 +1,8 @@
 export default function Overview({ overview }) {
   return (
-    <div className="flex flex-col gap-1 mt-2">
+    <div className="flex flex-col gap-1">
       <h3>Synopsis</h3>
-      <p>{overview}</p>
+      <p className="text-body-md">{overview}</p>
     </div>
   );
 }

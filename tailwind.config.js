@@ -19,6 +19,7 @@ module.exports = {
     },
     flex: {
       0: '0 0 auto',
+      2: '1 1 200%',
     },
     extend: {},
     colors: {
@@ -41,5 +42,5 @@ module.exports = {
       'body-xs': '0.875rem',
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar')({ nocompatible: true })],
 };

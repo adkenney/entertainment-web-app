@@ -17,12 +17,12 @@ function SearchBar({ placeholder }) {
   }
 
   return (
-    <div className="flex gap-4 p-4">
+    <div className="flex gap-4 p-4 md:p-6">
       <div>
         <SearchIcon />
       </div>
       <input
-        className="w-full bg-dark-blue caret-primary-red focus:outline-none"
+        className="w-full bg-dark-blue caret-primary-red focus:outline-none md:text-heading-m"
         type="text"
         placeholder={'Search for movies or TV series'}
         onChange={e => {

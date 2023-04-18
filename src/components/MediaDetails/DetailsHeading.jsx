@@ -13,9 +13,9 @@ export default function DetailsHeading({
   mediaType,
 }) {
   return (
-    <div className="flex flex-col gap-2">
-      <h2 className="text-center">{title}</h2>
-      <div className="flex justify-between text-center gap-1 mt-2">
+    <div className="flex flex-col gap-6">
+      <h2 className="text-center md:text-[3rem] md:text-left">{title}</h2>
+      <div className="flex justify-between text-center gap-1 mt-2 lg:justify-start lg:gap-8">
         {mediaType === 'movie' ? (
           <>
             <div>
