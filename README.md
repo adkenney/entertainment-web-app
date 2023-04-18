@@ -1,12 +1,10 @@
-# Frontend Mentor - Entertainment web app solution
-
-This is a solution to the [Entertainment web app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/entertainment-web-app-J-UhgAW1X). Frontend Mentor challenges help you improve your coding skills by building realistic project.
+# Entertainment web app
 
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Summary](#summary)
+  - [Screenshots](#screenshots)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -16,103 +14,61 @@ This is a solution to the [Entertainment web app challenge on Frontend Mentor](h
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
-### The challenge
+### Summary
 
-Users should be able to:
-
-- View the optimal layout for the app depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Navigate between Home, Movies, TV Series, and Bookmarked Shows pages
-- Add/Remove bookmarks from all movies and TV series
-- Search for relevant shows on all pages
-- **Bonus**: Build this project as a full-stack application
-- **Bonus**: If you're building a full-stack app, we provide authentication screen (sign-up/login) designs if you'd like to create an auth flow
-
-### Screenshot
-
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+A entertainment web application built with Next.js and TailwindCSS that provides a user-friendly interface that enables users to easily search for movies and TV shows by title.
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/entertainment-web-app-built-with-nextjs-tailwindcss-and-tmdb-api-k_nA-2q-MN)
+- Live Site URL: [Netlify](https://adkenney-entertainment.netlify.app/)
+
+### Screenshots
+
+<img width="1425" alt="Screenshot 2023-04-18 at 11 19 22 AM" src="https://user-images.githubusercontent.com/31222712/232825276-aaa14019-eab3-4853-8164-70d50aa1af43.png">
+
+<img width="1425" alt="Screenshot 2023-04-18 at 11 21 55 AM" src="https://user-images.githubusercontent.com/31222712/232825539-89b3520f-c2e5-4a0a-a08b-5f95040c39e8.png">
+
+<img width="1425" alt="Screenshot 2023-04-18 at 11 22 12 AM" src="https://user-images.githubusercontent.com/31222712/232825669-9b3ebc81-7efd-43bf-a5cc-6c15ce242619.png">
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
+- [Next.js](https://nextjs.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [TMDb API](https://www.themoviedb.org/)
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉');
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+This project was my first experience with Next.js so I learned a lot of things such as:
+- Working with Next.js API routes
+- Dynamic routes
+- Different rendering methods such as Server-side rendering and Static site generation
+- [useSWR](https://swr.vercel.app/) which I plan on expanding the use of for future pagination
+- Figuring out Next.js Image component 
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I still don't feel super confident with rendering methods and using Next.js API routes so I would love to continue building projects with Next.js and getting used to it.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Also in the future I plan on adding search by genre, and pagination for the search results, because right now it only displays one page.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Next.js docs](https://nextjs.org/docs/getting-started) - The docs are always the best place to start when learning anything new, it was a tremendous help.
+- [Tailwind docs](https://tailwindcss.com/docs/installation) - I'm still relatively new to Tailwind so referring back to the docs for styling classes was a constant need.
+- [React - The Complete Guide (incl Hooks, React Router, Redux)](https://www.udemy.com/course/react-the-complete-guide-incl-redux/) - This is a course I bought some time ago, and it has a Next.js section that helped with some examples of how pages, dynamic routes, and API routes worked in Next.js.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Linkedin - [Arkell Kenney](https://www.linkedin.com/in/arkellkenney/)
+- Frontend Mentor - [@adkenney](https://www.frontendmentor.io/profile/adkenney)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+I would like to acknowledge [hooiyan](https://github.com/hooiyan) for some of the inspiration going into this project.
