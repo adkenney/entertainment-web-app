@@ -1,4 +1,4 @@
-# Entertainment web app
+# Entertainment web app 🍿
 
 ## Table of contents
 
