@@ -1,7 +1,7 @@
-function HomeIcon() {
+function HomeIcon({ classname }) {
   return (
     <svg
-      className="nav-icon"
+      className={`nav-icon ${classname}`}
       width="20"
       height="20"
       xmlns="http://www.w3.org/2000/svg"

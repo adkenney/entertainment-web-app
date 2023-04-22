@@ -29,9 +29,11 @@
 
 @layer components {
   .nav-icon path {
-    @apply hover:fill-pure-white;
+    @apply hover:fill-primary-red;
   }
-
+  .active path {
+    @apply fill-primary-red;
+  }
   .genre-items {
     @apply text-body-xs rounded-md bg-primary-red p-1;
   }
