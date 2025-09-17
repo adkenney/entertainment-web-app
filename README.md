@@ -1,4 +1,4 @@
-# Entertainment web app 🍿
+# Popcorn 🍿
 
 ## Table of contents
 
